@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Calculator, Question } from "phosphor-react";
+import { BsCalculatorFill, BsQuestionCircle } from "react-icons/bs";
+
 import { Card } from "../components/Card";
 import { Sexo } from "../components/card-content/Sexo";
 import { Altura } from "../components/card-content/Altura";
@@ -23,13 +24,13 @@ const Home: NextPage = () => {
           <nav className="flex gap-4 h-8 justify-end items-center mr-6">
             <a className="flex items-center gap-1">
               <span>
-                <Calculator size={16} weight={"bold"} />
+                <BsCalculatorFill size={16} />
               </span>
               Calculadora
             </a>
             <a className="flex items-center gap-1">
               <span>
-                <Question size={16} weight={"bold"} />
+                <BsQuestionCircle size={16} />
               </span>
               Como o calculo é feito?
             </a>
@@ -40,19 +41,17 @@ const Home: NextPage = () => {
           ></div>
         </header>
 
-        <main className="flex flex-col gap-3 justify-center items-center mt-6">
-          <h1 className="text-5xl font-semibold text-slate-800">
-            Calculadora de Calorias
-          </h1>
+        <main className="flex flex-col gap-3 justify-center items-center mt-6 text-slate-800">
+          <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
           <p className="text-xl">
             Para um cálculo preciso, necessitamos de algumas informações básicas
             sobre você.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-6 w-full">
-            <Card title={"Informe seu gênero"} Content={Sexo} />
-            <Card title={"Qual é o seu peso?"} Content={Peso} />
-            <Card title={"Qual é o sua altura?"} Content={Altura} />
-            <Card title={"Qual é o sua idade?"} Content={Idade} />
+          <div className="flex flex-wrap justify-center gap-4 mt-6 w-full rounded-xl border-[1px] border-slate-400/60 max-w-5xl py-8  shadow-lg shadow-slate-400/50">
+            <Card Content={Sexo} />
+            <Card Content={Peso} />
+            <Card Content={Altura} />
+            <Card Content={Idade} />
           </div>
         </main>
 
