@@ -14,7 +14,8 @@
     "next": "12.1.6",
     "phosphor-react": "^1.4.1",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@types/node": "17.0.32",
