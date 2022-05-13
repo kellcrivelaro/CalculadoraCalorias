@@ -7,6 +7,7 @@ import { Sexo } from "../components/card-content/Sexo";
 import { Altura } from "../components/card-content/Altura";
 import { Idade } from "../components/card-content/Idade";
 import { Peso } from "../components/card-content/Peso";
+import { CardAtividade } from "../components/CardAtividade";
 
 const Home: NextPage = () => {
   return (
@@ -47,11 +48,15 @@ const Home: NextPage = () => {
             Para um cálculo preciso, necessitamos de algumas informações básicas
             sobre você.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-6 w-full rounded-xl border-[1px] border-slate-400/60 max-w-5xl py-8  shadow-lg shadow-slate-400/50">
+          <div
+            className="flex flex-wrap justify-center gap-4 mt-6 px-4 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
+          max-w-5xl py-8 shadow-lg shadow-slate-400/50"
+          >
             <Card Content={Sexo} />
             <Card Content={Peso} />
             <Card Content={Altura} />
             <Card Content={Idade} />
+            <CardAtividade />
           </div>
         </main>
 

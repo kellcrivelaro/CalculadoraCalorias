@@ -8,10 +8,10 @@ export function Idade() {
         <span className="pt-1">
           <IoTimerOutline size={24} />
         </span>
-        <h2 className="text-2xl mr-4">Idade</h2>
+        <h2 className="text-2xl mr-3">Idade</h2>
       </header>
-      <div className="flex flex-col h-full items-center justify-center mb-4">
-        <Input />
+      <div className="flex flex-col h-full items-center justify-center mb-2">
+        <Input placeholder={"21"} />
         <span>anos</span>
       </div>
     </>
