@@ -1,15 +1,19 @@
 import { FaWeight } from "react-icons/fa";
+import { Input } from "./Input";
 
 export function Peso() {
   return (
     <>
       <header className="flex items-center gap-2">
-        <span className="pt-1">
+        <span>
           <FaWeight size={24} />
         </span>
-        <h2 className="text-2xl mr-4">Peso</h2>
+        <h2 className="text-2xl mr-1">Peso</h2>
       </header>
-      <div className="flex gap-2">peso</div>
+      <div className="flex flex-col h-full items-center justify-center mb-2">
+        <Input placeholder={"85"} />
+        <span>quilos</span>
+      </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ import { BsGenderAmbiguous } from "react-icons/bs";
 import { useState, useRef } from "react";
 
 export function Sexo() {
-  const [genero, setGenero] = useState("");
+  const [genero, setGenero] = useState<string>("");
   const manLottie = useRef(null);
   const womanLottie = useRef(null);
 
