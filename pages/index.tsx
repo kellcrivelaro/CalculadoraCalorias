@@ -8,6 +8,7 @@ import { Altura } from "../components/card-content/Altura";
 import { Idade } from "../components/card-content/Idade";
 import { Peso } from "../components/card-content/Peso";
 import { CardAtividade } from "../components/CardAtividade";
+import { CardObjetivo } from "../components/CardObjetivo";
 
 const Home: NextPage = () => {
   return (
@@ -57,6 +58,7 @@ const Home: NextPage = () => {
             <Card Content={Altura} />
             <Card Content={Idade} />
             <CardAtividade />
+            <CardObjetivo />
           </div>
         </main>
 
