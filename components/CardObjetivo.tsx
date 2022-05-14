@@ -34,9 +34,11 @@ export function CardObjetivo() {
         <span className="pt-1">
           <ImTarget size={24} />
         </span>
-        <h2 className="text-2xl mr-1">Qual é o seu objetivo principal?</h2>
+        <h2 className="text-2xl mr-1 w-[240px] md:w-fit">
+          Qual é o seu objetivo principal?
+        </h2>
       </header>
-      <div className="flex w-full items-center justify-center gap-4">
+      <div className="flex flex-wrap w-full items-center justify-center gap-4">
         {Object.entries(objetivos).map(([key, value]) => {
           return (
             <CardObjetivoButton

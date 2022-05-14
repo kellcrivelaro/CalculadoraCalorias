@@ -39,11 +39,11 @@ export function CardAtividade() {
       className="flex flex-col items-center rounded-lg border-[1px] border-slate-400/40 p-4 gap-4 text-xl
     basis-[90%] md:basis-[400px] lg:basis-[944px]"
     >
-      <header className="flex items-center justify-center gap-2 text-center">
+      <header className="flex items-center justify-center gap-2">
         <span className="pt-1">
           <FaDumbbell />
         </span>
-        <h2 className="text-2xl mr-1">
+        <h2 className="text-2xl mr-1 w-[240px] md:w-fit">
           Qual é o seu nível de atividade diária?
         </h2>
       </header>

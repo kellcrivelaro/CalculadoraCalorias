@@ -1,4 +1,4 @@
-import { IoTimerOutline } from "react-icons/io5";
+import { BsHourglassSplit } from "react-icons/bs";
 import { Input } from "./Input";
 
 export function Idade() {
@@ -6,7 +6,7 @@ export function Idade() {
     <>
       <header className="flex items-center gap-2">
         <span className="pt-1">
-          <IoTimerOutline size={24} />
+          <BsHourglassSplit size={24} />
         </span>
         <h2 className="text-2xl mr-3">Idade</h2>
       </header>
