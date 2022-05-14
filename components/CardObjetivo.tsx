@@ -1,17 +1,20 @@
 import { ImTarget } from "react-icons/im";
 import { CardAtividadeButton } from "./card-content/CardAtividadeButton";
 import { useState } from "react";
-import atleta from "../assets/atleta.json";
 import { CardObjetivoButton } from "./card-content/CardObjetivoButton";
+
+import magro from "../assets/corredor.json";
+import manutencao from "../assets/manutencao.json";
+import atleta from "../assets/atleta.json";
 
 export const objetivos = {
   1: {
     title: "Emagrecimento",
-    image: atleta,
+    image: magro,
   },
   2: {
     title: "Manutenção do Peso",
-    image: atleta,
+    image: manutencao,
   },
   3: {
     title: "Ganho de Massa Muscular",
@@ -37,6 +40,7 @@ export function CardObjetivo() {
         {Object.entries(objetivos).map(([key, value]) => {
           return (
             <CardObjetivoButton
+              key={key}
               imagem={value.image}
               type={value.title}
               objetivoSelecionado={objetivoSelecionado}

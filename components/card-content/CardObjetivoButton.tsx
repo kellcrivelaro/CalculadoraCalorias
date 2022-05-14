@@ -34,17 +34,16 @@ export function CardObjetivoButton({
         lottieRef.current.play();
         setTimeout(() => {
           lottieRef.current.stop();
-        }, 2700);
+        }, 3000);
       }}
     >
       <div className="flex flex-col items-center gap-2">
-        <div className="w-36">
+        <div className="w-40">
           <Lottie
             animationData={imagem}
             lottieRef={lottieRef}
             autoPlay={false}
             loop={false}
-            size={12}
           />
         </div>
         <h2 className="text-xl font-bold">{type}</h2>
