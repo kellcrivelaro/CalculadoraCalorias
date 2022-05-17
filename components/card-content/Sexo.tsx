@@ -2,10 +2,11 @@ import Lottie from "lottie-react";
 import Man from "../../assets/man-avatar.json";
 import Woman from "../../assets/woman-avatar.json";
 import { BsGenderAmbiguous } from "react-icons/bs";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+import { DataContext } from "../../contexts/DataContext";
 
 export function Sexo() {
-  const [genero, setGenero] = useState<string>("");
+  const { sexo, setSexo } = useContext(DataContext);
   const manLottie = useRef(null);
   const womanLottie = useRef(null);
 
@@ -20,13 +21,13 @@ export function Sexo() {
       <div className="flex gap-2">
         <button
           className={`flex flex-col items-center border-[1px] transition-colors duration-300
-        ease-linear rounded-lg p-2 w-24 ${
-          genero === "m"
-            ? "bg-slate-200 border-slate-400"
+        ease-linear rounded-lg p-2 w-24 font-semibold ${
+          sexo === "m"
+            ? "bg-slate-200 border-slate-400 text-sky-600"
             : "bg-slate-200/10 border-slate-200 hover:border-slate-300 hover:bg-slate-200/50"
         }`}
           onClick={() => {
-            setGenero("m");
+            setSexo("m");
             manLottie.current.stop();
             manLottie.current.play();
           }}
@@ -41,13 +42,13 @@ export function Sexo() {
         </button>
         <button
           className={`flex flex-col items-center border-[1px] transition-colors duration-300
-        ease-linear rounded-lg p-2 w-24 ${
-          genero === "f"
-            ? "bg-slate-200 border-slate-400"
+        ease-linear rounded-lg p-2 w-24 font-semibold ${
+          sexo === "f"
+            ? "bg-slate-200 border-slate-400 text-pink-500"
             : "bg-slate-200/10 border-slate-200 hover:border-slate-300 hover:bg-slate-200/50"
         }`}
           onClick={() => {
-            setGenero("f");
+            setSexo("f");
             womanLottie.current.stop();
             womanLottie.current.play();
           }}

@@ -11,22 +11,25 @@ export const nivelAtividade = {
   1: {
     title: "Atividade Leve",
     description:
-      "Sentado na maior parte do tempo (ex.: trabalho em escritório)",
+      "Trabalha sentado na maior parte do tempo ou não costuma praticar atividades físicas.",
     image: sedentario,
   },
   2: {
     title: "Pouco ativo",
-    description: "Em pé na maior parte do tempo (ex.: professor)",
+    description:
+      "Trabalha em pé na maior parte do tempo ou pratica atividades físicas regularmente.",
     image: entregador,
   },
   3: {
     title: "Ativo",
-    description: "Andando na maior parte do tempo (ex.: vendedor)",
+    description:
+      "Seu trabalho exige que se locomova bastante e pratica atividades físicas regularmente.",
     image: ativo,
   },
   4: {
     title: "Muito ativo",
-    description: "Trabalho que exige muita atividade (ex.: pedreiro)",
+    description:
+      "Trabalho que exige atividade física intensa como por exemplo, pedreiro ou atleta.",
     image: trabalhadores,
   },
 };
@@ -39,12 +42,12 @@ export function CardAtividade() {
       className="flex flex-col items-center rounded-lg border-[1px] border-slate-400/40 p-4 gap-4 text-xl
     basis-[90%] md:basis-[400px] lg:basis-[944px]"
     >
-      <header className="flex items-center justify-center gap-2">
-        <span className="pt-1">
+      <header className="flex items-center justify-center">
+        <span className="pt-1 ml-2 md:ml-0 mr-0 md:mr-2">
           <FaDumbbell />
         </span>
-        <h2 className="text-2xl mr-1 w-[240px] md:w-fit">
-          Qual é o seu nível de atividade diária?
+        <h2 className="text-2xl mr-1 w-[220px] md:w-fit">
+          Nível de Atividade Diária
         </h2>
       </header>
       <div className="flex flex-wrap w-full items-center justify-center gap-4">
@@ -52,11 +55,10 @@ export function CardAtividade() {
           return (
             <CardAtividadeButton
               key={key}
+              id={key}
               imagem={value.image}
               type={value.title}
               description={value.description}
-              atividadeSelecionada={atividadeSelecionada}
-              setAtividadeSelecionada={setAtividadeSelecionada}
             />
           );
         })}
