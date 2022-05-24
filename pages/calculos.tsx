@@ -13,6 +13,7 @@ const Calculos: NextPage = () => {
         <h1 className="text-4xl font-semibold">Como o calculo é feito?</h1>
         <Script
           async
+          id="ad-sense"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
           crossOrigin="anonymous"
         ></Script>

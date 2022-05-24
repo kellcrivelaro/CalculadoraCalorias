@@ -24,6 +24,7 @@ const Home: NextPage = () => {
         <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
         <Script
           async
+          id="ad-sense-1"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
           crossOrigin="anonymous"
         ></Script>
@@ -63,6 +64,7 @@ const Home: NextPage = () => {
       <div className="flex grow">
         <Script
           async
+          id="ad-sense-1"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
           crossOrigin="anonymous"
         ></Script>
