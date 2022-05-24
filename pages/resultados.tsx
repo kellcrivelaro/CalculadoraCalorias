@@ -111,7 +111,7 @@ const Resultados: NextPage = () => {
       <div className="flex grow">
         <Script
           async
-          id="ad-sense"
+          id="ad-sense-res"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
           crossOrigin="anonymous"
         ></Script>
@@ -122,7 +122,9 @@ const Resultados: NextPage = () => {
           data-ad-client="ca-pub-7819905148018536"
           data-ad-slot="9732755258"
         ></ins>
-        <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+        <Script id="ad-sense-res-2">
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </Script>
       </div>
 
       <Footer />

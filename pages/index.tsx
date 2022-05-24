@@ -35,7 +35,9 @@ const Home: NextPage = () => {
           data-ad-client="ca-pub-7819905148018536"
           data-ad-slot="9732755258"
         ></ins>
-        <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+        <Script id="ad-sense-index-1">
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </Script>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -64,7 +66,7 @@ const Home: NextPage = () => {
       <div className="flex grow">
         <Script
           async
-          id="ad-sense-1"
+          id="ad-sense-2"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
           crossOrigin="anonymous"
         ></Script>
@@ -75,7 +77,9 @@ const Home: NextPage = () => {
           data-ad-client="ca-pub-7819905148018536"
           data-ad-slot="9732755258"
         ></ins>
-        <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+        <Script id="ad-sense-index-2">
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </Script>
       </div>
       <section className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
         <h2 className="text-4xl font-semibold">Como o calculo é feito?</h2>

@@ -28,12 +28,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Script
         async
+        id="ad-sense-app"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
         crossOrigin="anonymous"
       ></Script>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
+        id="gtag-ID"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <Script
