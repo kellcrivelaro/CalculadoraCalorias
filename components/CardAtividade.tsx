@@ -2,7 +2,6 @@ import { FaDumbbell } from "react-icons/fa";
 import { CardAtividadeButton } from "./card-content/CardAtividadeButton";
 import sedentario from "../assets/sedentario2.json";
 import ativo from "../assets/ativo2.json";
-import atleta from "../assets/atleta.json";
 import trabalhadores from "../assets/worker1.json";
 import entregador from "../assets/entregador.json";
 import { useState } from "react";
@@ -15,19 +14,19 @@ export const nivelAtividade = {
     image: sedentario,
   },
   2: {
-    title: "Pouco ativo",
+    title: "Moderada",
     description:
       "Trabalha em pé na maior parte do tempo ou pratica atividades físicas regularmente.",
     image: entregador,
   },
   3: {
-    title: "Ativo",
+    title: "Intensa",
     description:
       "Seu trabalho exige que se locomova bastante e pratica atividades físicas regularmente.",
     image: ativo,
   },
   4: {
-    title: "Muito ativo",
+    title: "Muito intensa",
     description:
       "Trabalho que exige atividade física intensa como por exemplo, pedreiro ou atleta.",
     image: trabalhadores,

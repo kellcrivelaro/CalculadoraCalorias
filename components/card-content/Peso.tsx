@@ -14,7 +14,7 @@ export function Peso() {
         <h2 className="text-2xl mr-1">Peso</h2>
       </header>
       <div className="flex flex-col h-full items-center justify-center mb-2">
-        <Input placeholder={"85"} set={setPeso} />
+        <Input placeholder={"85"} set={setPeso} focus />
         <span>quilos</span>
       </div>
     </>

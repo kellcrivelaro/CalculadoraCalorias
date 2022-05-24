@@ -31,14 +31,15 @@ const Resultados: NextPage = () => {
   useEffect(() => {
     calculoBasal();
     calculoSugestao();
+    console.log(sexo, altura, peso, idade, atividade, objetivo);
   });
 
   function calculoBasal() {
     let b = 0;
     if (sexo === "m") {
-      b = 204 - 4 * idade + (450.5 * altura) / 100 + 11.69 * peso;
+      b = 66 + 13.8 * peso + 5 * altura - 6.8 * idade;
     } else {
-      b = 255 - 2.35 * idade + (361.6 * altura) / 100 + 9.39 * peso;
+      b = 655 + 9.6 * peso + 1.9 * altura - 4.7 * idade;
     }
     setBasal(b);
   }
@@ -59,7 +60,7 @@ const Resultados: NextPage = () => {
       if (sexo == "m") manutencao = basal * 1.7;
       else manutencao = basal * 1.65;
     }
-    console.log(objetivo, objetivo == 1);
+
     if (objetivo == 1) {
       console.log("emag");
       min = manutencao - 500;

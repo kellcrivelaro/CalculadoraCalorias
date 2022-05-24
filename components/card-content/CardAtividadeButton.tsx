@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import { DataContext } from "../../contexts/DataContext";
 // import Lottie from "react-lottie";
@@ -14,7 +14,7 @@ interface Props {
 
 export function CardAtividadeButton({ id, imagem, type, description }: Props) {
   const { atividade, setAtividade } = useContext(DataContext);
-  const lottieRef = useRef(null);
+  const lottieRef = useRef<any>(null);
 
   useEffect(() => {
     lottieRef.current.stop();
@@ -24,11 +24,12 @@ export function CardAtividadeButton({ id, imagem, type, description }: Props) {
     <button
       className={`flex flex-col items-center border-[1px] transition-colors duration-300 grow
         ease-linear rounded-lg p-2 h-[295px] basis-[100%] md:basis-[40%] lg:basis-[20%] ${
-          atividade === id
+          atividade == id
             ? "bg-slate-200 border-slate-400"
             : "bg-slate-200/10 border-slate-200 hover:border-slate-300 hover:bg-slate-200/50"
         }`}
-      onClick={() => {
+      onClick={(e) => {
+        e.preventDefault();
         setAtividade(id);
         lottieRef.current.stop();
         lottieRef.current.play();
@@ -50,7 +51,7 @@ export function CardAtividadeButton({ id, imagem, type, description }: Props) {
 
         <h2
           className={`text-xl font-semibold ${
-            atividade === id && "text-sky-600"
+            atividade == id && "text-sky-600"
           }`}
         >
           {type}

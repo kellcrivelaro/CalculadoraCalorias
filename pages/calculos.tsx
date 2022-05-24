@@ -1,58 +1,20 @@
 import type { NextPage } from "next";
 
-import { Card } from "../components/Card";
-import { Sexo } from "../components/card-content/Sexo";
-import { Altura } from "../components/card-content/Altura";
-import { Idade } from "../components/card-content/Idade";
-import { Peso } from "../components/card-content/Peso";
-import { CardAtividade } from "../components/CardAtividade";
-import { CardObjetivo } from "../components/CardObjetivo";
-import { Button } from "../components/Button";
-import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { useRouter } from "next/router";
+import { Header } from "../components/Header";
 
-const Home: NextPage = () => {
-  const router = useRouter();
-
+const Calculos: NextPage = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
 
       <main className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
-        <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            router.push("/resultados");
-          }}
-          action="/resultados"
-          className="flex flex-wrap justify-center gap-4 mt-6 px-4 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
-            max-w-5xl py-6 mb-4 shadow-lg shadow-slate-400/50"
-        >
-          <p className="text-xl w-full px-2">
-            Informe seus dados pessoais para descobrir a quantidade ideal de
-            calorias diárias!
-          </p>
-          <Card Content={Sexo} />
-          <Card Content={Peso} />
-          <Card Content={Altura} />
-          <Card Content={Idade} />
-          <CardAtividade />
-          <CardObjetivo />
-
-          <button type="submit">
-            <Button>Calcular</Button>
-          </button>
-        </form>
-      </main>
-      <section className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
-        <h2 className="text-4xl font-semibold">Como o calculo é feito?</h2>
+        <h1 className="text-4xl font-semibold">Como o calculo é feito?</h1>
         <div
           className="flex flex-wrap flex-col items-center justify-center gap-4 mt-4 lg:px-16 px-8 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
             max-w-5xl py-4 mb-4 shadow-lg shadow-slate-400/50 text-lg"
         >
-          <h3 className="text-3xl pt-4 font-semibold">Metabolismo Basal</h3>
+          <h2 className="text-3xl pt-4 font-semibold">Metabolismo Basal</h2>
           <p className="text-justify indent-8">
             Saber quantas calorias o corpo gasta para manter se manter, é o
             primeiro passo para adequar a alimentação ao gasto energético
@@ -82,9 +44,9 @@ const Home: NextPage = () => {
               cm) – (4,7 x idade anos)
             </p>
           </div>
-          <h3 className="text-3xl pt-4 font-semibold">
+          <h2 className="text-3xl pt-4 font-semibold">
             Necessidade Energética Diária
-          </h3>
+          </h2>
           <p className="text-justify indent-8">
             Segundo a Organização Mundial de Saúde, necessidade energética é
             definida como o nível de energia ingerida que seria suficiente para
@@ -99,9 +61,9 @@ const Home: NextPage = () => {
             cada momento fisiológico, suprir o ETA (efeito termogênico dos
             alimentos) e o gasto com atividade física.
           </p>
-          <h4 className="text-justify indent-8 font-semibold text-2xl">
+          <h3 className="text-justify indent-8 font-semibold text-2xl">
             Níveis de atividade:
-          </h4>
+          </h3>
           <ul className="mb-8 text-justify indent-8">
             <li>
               • LEVE: atividade geralmente realizada na posição sentada, como é
@@ -135,11 +97,11 @@ const Home: NextPage = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </main>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default Home;
+export default Calculos;

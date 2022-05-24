@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
   placeholder: string | null;
   set: (newValue: number) => void;
+  focus?: boolean;
 }
 
-export function Input({ placeholder, set }: Props) {
+export function Input({ placeholder, set, focus = false }: Props) {
   const [haveFocus, setHaveFocus] = useState(false);
   const [inputValue, setInputValue] = useState("");
+
+  const ref = useRef<any>(null);
+
+  useEffect(() => {
+    focus && ref.current.focus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="flex flex-col relative">
@@ -26,6 +34,9 @@ export function Input({ placeholder, set }: Props) {
         onBlur={() => {
           setHaveFocus(false);
         }}
+        ref={ref}
+        min={1}
+        required
       />
       <div
         className={`absolute top-[42px] w-full h-[2px] bg-slate-500/90`}

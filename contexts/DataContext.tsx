@@ -17,10 +17,12 @@ type DataContextType = {
   setAtividade: (newAtividade: number) => void;
   objetivo: number;
   setObjetivo: (newObjetivo: number) => void;
+  validation: boolean;
+  setValidation: (newValidation: boolean) => void;
 };
 
 export const initialValue = {
-  sexo: "",
+  sexo: "m",
   setSexo: () => {},
   idade: 0,
   setIdade: () => {},
@@ -28,10 +30,12 @@ export const initialValue = {
   setAltura: () => {},
   peso: 0,
   setPeso: () => {},
-  atividade: 0,
+  atividade: 1,
   setAtividade: () => {},
-  objetivo: 0,
+  objetivo: 1,
   setObjetivo: () => {},
+  validation: false,
+  setValidation: () => {},
 };
 
 export const DataContext = createContext<DataContextType>(initialValue);
@@ -43,6 +47,7 @@ export const DataContextProvider = ({ children }: DataContextProps) => {
   const [peso, setPeso] = useState(initialValue.peso);
   const [atividade, setAtividade] = useState(initialValue.atividade);
   const [objetivo, setObjetivo] = useState(initialValue.objetivo);
+  const [validation, setValidation] = useState(initialValue.validation);
 
   return (
     <DataContext.Provider
@@ -59,6 +64,8 @@ export const DataContextProvider = ({ children }: DataContextProps) => {
         setAtividade,
         objetivo,
         setObjetivo,
+        validation,
+        setValidation,
       }}
     >
       {children}

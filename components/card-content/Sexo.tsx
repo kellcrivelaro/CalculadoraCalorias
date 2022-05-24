@@ -7,8 +7,8 @@ import { DataContext } from "../../contexts/DataContext";
 
 export function Sexo() {
   const { sexo, setSexo } = useContext(DataContext);
-  const manLottie = useRef(null);
-  const womanLottie = useRef(null);
+  const manLottie = useRef<any>(null);
+  const womanLottie = useRef<any>(null);
 
   return (
     <>
@@ -26,7 +26,8 @@ export function Sexo() {
             ? "bg-slate-200 border-slate-400 text-sky-600"
             : "bg-slate-200/10 border-slate-200 hover:border-slate-300 hover:bg-slate-200/50"
         }`}
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             setSexo("m");
             manLottie.current.stop();
             manLottie.current.play();
@@ -47,7 +48,8 @@ export function Sexo() {
             ? "bg-slate-200 border-slate-400 text-pink-500"
             : "bg-slate-200/10 border-slate-200 hover:border-slate-300 hover:bg-slate-200/50"
         }`}
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             setSexo("f");
             womanLottie.current.stop();
             womanLottie.current.play();

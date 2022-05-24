@@ -7,11 +7,6 @@ export function Header() {
   return (
     <>
       <Head>
-        <title>Calculadora de Calorias Diárias</title>
-        <meta
-          name="description"
-          content="Calculadora das calorias basais e do consumo ideal diárias, baseado em seu objetivo pessoal."
-        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
@@ -26,15 +21,15 @@ export function Header() {
           </a>
           <div className="flex gap-4 justify-end items-center pr-0 md:pr-3">
             <Link href="/" rel={"author noreferrer"}>
-              <div className="flex items-center gap-1 hover:text-sky-600 transition-colors">
+              <div className="flex items-center gap-1 hover:text-sky-600 transition-colors cursor-pointer">
                 <span>
                   <BsCalculatorFill size={16} />
                 </span>
                 <p className="hidden md:block">Calculadora</p>
               </div>
             </Link>
-            <Link href="/">
-              <div className="flex items-center gap-1 hover:text-sky-600 transition-colors">
+            <Link href="/calculos">
+              <div className="flex items-center gap-1 hover:text-sky-600 transition-colors cursor-pointer">
                 <span>
                   <BsQuestionCircle size={16} />
                 </span>

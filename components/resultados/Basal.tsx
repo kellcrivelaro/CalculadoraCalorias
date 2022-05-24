@@ -12,7 +12,7 @@ export function Basal({ basal }: Props) {
     >
       <header className="flex items-center justify-center gap-2">
         <span className="pt-1">{/* <FaDumbbell /> */}</span>
-        <h2 className="text-2xl mr-1">Taxa Metabólica Basal</h2>
+        <h2 className="text-2xl mr-1 font-semibold">Taxa Metabólica Basal</h2>
       </header>
       <div className="flex items-end gap-2 text-sky-600 font-semibold mt-6 mb-1">
         <AnimatedNumber
@@ -24,7 +24,7 @@ export function Basal({ basal }: Props) {
         />
         <span>kcal</span>
       </div>
-      <p className="text-base">
+      <p className="text-lg">
         Calorias que você gasta por dia para as funções vitais do corpo, também
         conhecida como gasto em repouso (não inclui efeito térmico e gasto com
         atividades físicas).
