@@ -1,5 +1,4 @@
 import { ImTarget } from "react-icons/im";
-import { CardAtividadeButton } from "./card-content/CardAtividadeButton";
 import { useState } from "react";
 import { CardObjetivoButton } from "./card-content/CardObjetivoButton";
 
@@ -41,7 +40,7 @@ export function CardObjetivo() {
           return (
             <CardObjetivoButton
               key={key}
-              id={key}
+              id={Number(key)}
               imagem={value.image}
               type={value.title}
             />

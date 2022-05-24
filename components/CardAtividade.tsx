@@ -1,8 +1,8 @@
 import { FaDumbbell } from "react-icons/fa";
 import { CardAtividadeButton } from "./card-content/CardAtividadeButton";
-import sedentario from "../assets/sedentario2.json";
-import ativo from "../assets/ativo2.json";
-import trabalhadores from "../assets/worker1.json";
+import sedentario from "../assets/sedentario.json";
+import ativo from "../assets/ativo.json";
+import trabalhadores from "../assets/worker.json";
 import entregador from "../assets/entregador.json";
 import { useState } from "react";
 
@@ -54,7 +54,7 @@ export function CardAtividade() {
           return (
             <CardAtividadeButton
               key={key}
-              id={key}
+              id={Number(key)}
               imagem={value.image}
               type={value.title}
               description={value.description}
