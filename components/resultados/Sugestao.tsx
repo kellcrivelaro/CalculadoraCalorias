@@ -17,7 +17,7 @@ export function Sugestao({ min, max }: Props) {
           Sugestão de Calorias Diárias
         </h2>
       </header>
-      <div className="flex items-end gap-2 text-sky-600 font-semibold mt-6 mb-1">
+      <div className="flex items-end justify-center gap-2 text-sky-600 font-semibold mt-6 mb-1 flex-wrap">
         <AnimatedNumber
           value={min}
           formatValue={(v: number) => v.toFixed(0)}

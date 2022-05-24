@@ -14,7 +14,7 @@ export function Basal({ basal }: Props) {
         <span className="pt-1">{/* <FaDumbbell /> */}</span>
         <h2 className="text-2xl mr-1 font-semibold">Taxa Metabólica Basal</h2>
       </header>
-      <div className="flex items-end gap-2 text-sky-600 font-semibold mt-6 mb-1">
+      <div className="flex items-end justify-center gap-2 text-sky-600 font-semibold mt-6 mb-1 flex-wrap">
         <AnimatedNumber
           value={basal}
           formatValue={(v: number) => v.toFixed(0)}
