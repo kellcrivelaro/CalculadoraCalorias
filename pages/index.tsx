@@ -11,6 +11,7 @@ import { Button } from "../components/Button";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -21,6 +22,19 @@ const Home: NextPage = () => {
 
       <main className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
         <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
+          crossOrigin="anonymous"
+        ></Script>
+        <ins
+          className="adsbygoogle block text-center"
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-7819905148018536"
+          data-ad-slot="9732755258"
+        ></ins>
+        <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -46,6 +60,21 @@ const Home: NextPage = () => {
           </button>
         </form>
       </main>
+      <div className="flex grow">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
+          crossOrigin="anonymous"
+        ></Script>
+        <ins
+          className="adsbygoogle block text-center"
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-7819905148018536"
+          data-ad-slot="9732755258"
+        ></ins>
+        <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+      </div>
       <section className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
         <h2 className="text-4xl font-semibold">Como o calculo é feito?</h2>
         <div

@@ -26,6 +26,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
+        crossorigin="anonymous"
+      ></script>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"

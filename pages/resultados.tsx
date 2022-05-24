@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { useContext, useEffect, useState } from "react";
 import { Button } from "../components/Button";
 import { Footer } from "../components/Footer";
@@ -31,7 +32,6 @@ const Resultados: NextPage = () => {
   useEffect(() => {
     calculoBasal();
     calculoSugestao();
-    console.log(sexo, altura, peso, idade, atividade, objetivo);
   });
 
   function calculoBasal() {
@@ -62,15 +62,12 @@ const Resultados: NextPage = () => {
     }
 
     if (objetivo == 1) {
-      console.log("emag");
       min = manutencao - 500;
       max = manutencao - 300;
     } else if (objetivo == 2) {
-      console.log("manut");
       min = manutencao - 100;
       max = manutencao + 100;
     } else {
-      console.log("massa");
       min = manutencao + 300;
       max = manutencao + 500;
     }
@@ -111,6 +108,21 @@ const Resultados: NextPage = () => {
           </Link>
         </div>
       </main>
+      <div className="flex grow">
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
+          crossOrigin="anonymous"
+        ></Script>
+        <ins
+          className="adsbygoogle block text-center"
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-7819905148018536"
+          data-ad-slot="9732755258"
+        ></ins>
+        <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+      </div>
 
       <Footer />
     </div>
