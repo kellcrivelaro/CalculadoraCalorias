@@ -22,7 +22,7 @@ export function Input({ placeholder, set, focus = false }: Props) {
       <input
         type={"number"}
         placeholder={placeholder ? placeholder : ""}
-        className="text-3xl m-1 pl-4 w-28 bg-transparent outline-none text-center font-semibold placeholder-slate-300"
+        className="text-3xl m-1 pl-0 md:pl-4 w-28 bg-transparent outline-none text-center font-semibold placeholder-slate-300"
         value={inputValue}
         onChange={(e) => {
           setInputValue(e.target.value);

@@ -88,11 +88,11 @@ const Resultados: NextPage = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="flex flex-col justify-start items-center mt-2 text-slate-800 text-center grow">
+      <main className="flex flex-col justify-start items-center mt-2 text-slate-800 text-center mb-4">
         <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
         <div
           className="flex flex-wrap justify-center gap-4 mt-6 px-4 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
-            max-w-5xl py-4 mb-4 shadow-lg shadow-slate-400/50"
+            max-w-5xl py-4 shadow-lg shadow-slate-400/50"
         >
           <h2 className="text-3xl font-semibold w-full">Resultados</h2>
           <Basal basal={basal} />
@@ -108,7 +108,7 @@ const Resultados: NextPage = () => {
           </Link>
         </div>
       </main>
-      <div className="flex grow">
+      <div className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2">
         <Script
           async
           id="ad-sense-res"
