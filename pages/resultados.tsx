@@ -85,46 +85,45 @@ const Resultados: NextPage = () => {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+    <div className="flex flex-col justify-between min-h-screen">
+      <div className="flex flex-col">
+        <Header />
 
-      <main className="flex flex-col justify-start items-center mt-2 text-slate-800 text-center mb-4">
-        <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
-        <div
-          className="flex flex-wrap justify-center gap-4 mt-6 px-4 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
+        <main className="flex flex-col justify-start items-center mt-2 text-slate-800 text-center mb-4">
+          <div className="flex items-center justify-center w-full max-w-5xl rounded-xl p-2">
+            <Script
+              async
+              id="ad-sense-res"
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
+              crossOrigin="anonymous"
+            ></Script>
+            <ins
+              className="adsbygoogle block text-center"
+              data-ad-layout="in-article"
+              data-ad-format="fluid"
+              data-ad-client="ca-pub-7819905148018536"
+              data-ad-slot="9732755258"
+            ></ins>
+          </div>
+          <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
+          <div
+            className="flex flex-wrap justify-center gap-4 mt-6 px-4 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
             max-w-5xl py-4 shadow-lg shadow-slate-400/50"
-        >
-          <h2 className="text-3xl font-semibold w-full">Resultados</h2>
-          <Basal basal={basal} />
-          <Sugestao min={objetivoMin} max={objetivoMax} />
-          <Link href="/" passHref>
-            <a
-              onClick={() => {
-                resetData();
-              }}
-            >
-              <Button>Novo Cálculo</Button>
-            </a>
-          </Link>
-        </div>
-      </main>
-      <div className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2">
-        <Script
-          async
-          id="ad-sense-res"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7819905148018536"
-          crossOrigin="anonymous"
-        ></Script>
-        <ins
-          className="adsbygoogle block text-center"
-          data-ad-layout="in-article"
-          data-ad-format="fluid"
-          data-ad-client="ca-pub-7819905148018536"
-          data-ad-slot="9732755258"
-        ></ins>
-        {/* <Script id="ad-sense-res-2">
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </Script> */}
+          >
+            <h2 className="text-3xl font-semibold w-full">Resultados</h2>
+            <Basal basal={basal} />
+            <Sugestao min={objetivoMin} max={objetivoMax} />
+            <Link href="/" passHref>
+              <a
+                onClick={() => {
+                  resetData();
+                }}
+              >
+                <Button>Novo Cálculo</Button>
+              </a>
+            </Link>
+          </div>
+        </main>
       </div>
 
       <Footer />

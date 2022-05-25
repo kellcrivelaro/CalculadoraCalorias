@@ -10,8 +10,7 @@ const Calculos: NextPage = () => {
       <Header />
 
       <main className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
-        <h1 className="text-4xl font-semibold">Como o calculo é feito?</h1>
-        <div className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2 mt-2">
+        <div className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2">
           <Script
             async
             id="ad-sense-calc"
@@ -25,10 +24,8 @@ const Calculos: NextPage = () => {
             data-ad-client="ca-pub-7819905148018536"
             data-ad-slot="9732755258"
           ></ins>
-          {/* <Script id="ad-sense-calc2">
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </Script> */}
         </div>
+        <h1 className="text-4xl font-semibold">Como o calculo é feito?</h1>
         <div
           className="flex flex-wrap flex-col items-center justify-center gap-4 mt-4 lg:px-16 px-8 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 
             max-w-5xl py-4 mb-4 shadow-lg shadow-slate-400/50 text-lg"

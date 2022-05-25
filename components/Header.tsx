@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { useEffect, forwardRef } from "react";
 import { BsCalculatorFill, BsQuestionCircle } from "react-icons/bs";
 import { ImGithub } from "react-icons/im";
 
-export function Header() {
+export const Header = forwardRef((props, ref) => {
+  const router = useRouter();
+
   useEffect(() => {
     var ads = document.getElementsByClassName("adsbygoogle").length;
     for (var i = 0; i < ads; i++) {
@@ -15,6 +18,17 @@ export function Header() {
       } catch (e) {}
     }
   }, []);
+
+  function roll() {
+    if (ref) {
+      (ref as any).current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      router.push("/calculos");
+    }
+  }
 
   return (
     <>
@@ -40,14 +54,17 @@ export function Header() {
                 <p className="hidden md:block">Calculadora</p>
               </div>
             </Link>
-            <Link href="/calculos">
-              <div className="flex items-center gap-1 hover:text-sky-600 transition-colors cursor-pointer">
-                <span>
-                  <BsQuestionCircle size={16} />
-                </span>
-                <p className="hidden md:block">Como o calculo é feito?</p>
-              </div>
-            </Link>
+            {/* <Link href="/calculos"> */}
+            <div
+              className="flex items-center gap-1 hover:text-sky-600 transition-colors cursor-pointer"
+              onClick={roll}
+            >
+              <span>
+                <BsQuestionCircle size={16} />
+              </span>
+              <p className="hidden md:block">Como o calculo é feito?</p>
+            </div>
+            {/* </Link> */}
           </div>
         </nav>
         <div
@@ -57,4 +74,4 @@ export function Header() {
       </header>
     </>
   );
-}
+});

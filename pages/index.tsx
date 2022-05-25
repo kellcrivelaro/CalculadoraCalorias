@@ -12,16 +12,17 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import { useRef } from "react";
 
 const Home: NextPage = () => {
   const router = useRouter();
+  const ref = useRef(null);
 
   return (
     <>
-      <Header />
+      <Header ref={ref} />
 
       <main className="flex flex-col justify-center items-center mt-2 text-slate-800 text-center">
-        <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
         <div className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2">
           <Script
             async
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
             (adsbygoogle = window.adsbygoogle || []).push({});
           </Script> */}
         </div>
+        <h1 className="text-5xl font-semibold">Calculadora de Calorias</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -65,7 +67,10 @@ const Home: NextPage = () => {
           </button>
         </form>
       </main>
-      <div className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2">
+      <div
+        className="flex items-center justify-center grow w-full max-w-5xl mx-auto rounded-xl p-2"
+        ref={ref}
+      >
         <Script
           async
           id="ad-sense-2"
