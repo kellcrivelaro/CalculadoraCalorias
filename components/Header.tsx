@@ -1,9 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect } from "react";
 import { BsCalculatorFill, BsQuestionCircle } from "react-icons/bs";
 import { ImGithub } from "react-icons/im";
 
 export function Header() {
+  useEffect(() => {
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(
+          {}
+        );
+      } catch (e) {}
+    }
+  }, []);
+
   return (
     <>
       <Head>

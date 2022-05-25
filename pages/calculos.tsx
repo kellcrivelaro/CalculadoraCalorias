@@ -25,9 +25,9 @@ const Calculos: NextPage = () => {
             data-ad-client="ca-pub-7819905148018536"
             data-ad-slot="9732755258"
           ></ins>
-          <Script id="ad-sense-calc2">
+          {/* <Script id="ad-sense-calc2">
             (adsbygoogle = window.adsbygoogle || []).push({});
-          </Script>
+          </Script> */}
         </div>
         <div
           className="flex flex-wrap flex-col items-center justify-center gap-4 mt-4 lg:px-16 px-8 w-[calc(100%-40px)] rounded-xl border-[1px] border-slate-400/60 

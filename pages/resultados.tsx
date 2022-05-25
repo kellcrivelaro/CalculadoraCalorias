@@ -122,9 +122,9 @@ const Resultados: NextPage = () => {
           data-ad-client="ca-pub-7819905148018536"
           data-ad-slot="9732755258"
         ></ins>
-        <Script id="ad-sense-res-2">
+        {/* <Script id="ad-sense-res-2">
           (adsbygoogle = window.adsbygoogle || []).push({});
-        </Script>
+        </Script> */}
       </div>
 
       <Footer />
